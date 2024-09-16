@@ -1,4 +1,4 @@
-import boto3, time, requests, sys
+import boto3, time, requests, sys, os
 from botocore.exceptions import ClientError
 
 def checkHostAddr(client, hostzoneId, domainName):
@@ -56,8 +56,10 @@ def updateIpAdder(client, hostzoneId, domainName, ipAddr):
 
 
 def main():
+    current_directory = os.path.dirname(os.path.abspath(__file__))
+    print(current_directory)
     try:
-        config = open('./config', 'r')
+        config = open(f'{current_directory}/config', 'r')
 
         AWS_ACCESS_KEY_ID = config.readline().split(' ')[1].replace('\n', '')
         AWS_SECRET_ACCESS_KEY = config.readline().split(' ')[1].replace('\n', '')
