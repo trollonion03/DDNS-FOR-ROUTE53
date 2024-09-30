@@ -2,7 +2,12 @@
 
 ROUTE53 도메인 서비스 이용시 유동 IP 서버에 대응하기 위한 DDNS 서비스입니다.
 
-## 기능
+기능
+-------
 
 - A 레코드 IP 조회/업데이트
 
+Target
+--------
+
+![UBUNTU](https://img.shields.io/badge/Ubuntu-22.04-E95420?style=flat-square&logo=Ubuntu&logoColor=white)
